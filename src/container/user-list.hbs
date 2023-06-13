@@ -1,0 +1,20 @@
+<div>
+  {{> space}}
+  {{> title text="User list"}}
+  {{> line}}
+  <ul>
+    {{#each data.userlist}}
+      <li>
+        {{> user data=this}}
+        <br>
+      </li>
+    {{/each}}
+  </ul>
+  {{>space}}
+  {{>title text="Top user"}}
+  {{>line}}
+
+  <div>
+    {{>user data=data.userlist.[0] }}
+  </div>
+</div>
